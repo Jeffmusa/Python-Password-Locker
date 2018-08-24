@@ -1,11 +1,11 @@
 #!/usr/bin/env python3.6
 from account import Account
 
-def create_account(account_name,uname,pwd,email):
+def create_account(account_name,uname,password,email):
     '''
     Function to create a new account
     '''
-    new_account = Account(account_name,uname,pwd,email)
+    new_account = Account(account_name,uname,password,email)
     return new_account
 
 def save_accounts(account):
@@ -45,7 +45,7 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these short codes : ca - create a new account, da - display accounts, fa -find accounts, ex -exit Pass Word Locker ")
+        print("Use these known short codes to operate :\n ca - create a new account,\n da - display accounts,\n fa -find accounts,\n ex -exit Pass Word Locker ")
         short_code = input().lower()
         if short_code == 'ca':
             print("New Account")
@@ -67,7 +67,7 @@ def main():
                  print("Here is a list of all your accounts")
                  print('\n')
                  for account in display_accounts():
-                     print(f"{account.account_name}  .....{account.pwd}")
+                     print(f"{account.account_name}  .....{account.password}")
                      print('\n')
              else:
                  print('\n')
@@ -87,7 +87,7 @@ def main():
                     print("That account does not exist")
                     
         elif short_code == "ex":
-                    print("Bye .......")
+                    print(f"Bye {user_name}.I hope you enjoyed my service")
                     break
         else:
                     print("I really didn't get that. Please use the short codes")
