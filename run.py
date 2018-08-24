@@ -1,11 +1,11 @@
 #!/usr/bin/env python3.6
 from account import Account
 
-def create_account(account_name,uname,password,email):
+def create_account(account_name,user_name,password,email):
     '''
     Function to create a new account
     '''
-    new_account = Account(account_name,uname,password,email)
+    new_account = Account(account_name,user_name,password,email)
     return new_account
 
 def save_accounts(account):
@@ -45,11 +45,11 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these known short codes to operate :\n ca - create a new account,\n da - display accounts,\n fa -find accounts,\n ex -exit Pass Word Locker ")
+        print("Use these known short codes to operate :\n ca - create a new account,\n da - display accounts,\n fa -find created accounts,\n ex -exit Pass Word Locker ")
         short_code = input().lower()
         if short_code == 'ca':
             print("New Account")
-            print("-"*10)
+            print("*"*100)
             print ("Account name ....")
             account_name = input()
             print("User name ...")
@@ -67,7 +67,7 @@ def main():
                  print("Here is a list of all your accounts")
                  print('\n')
                  for account in display_accounts():
-                     print(f"{account.account_name}  .....{account.password}")
+                     print(f"Account name:{account.account_name}  User name: {account.user_name} Password:{account.password}")
                      print('\n')
              else:
                  print('\n')
@@ -84,7 +84,7 @@ def main():
                     print(f"Email address.......{search_account.email}")
                     
                 else:
-                    print("That account does not exist")
+                    print("You don't have an account by that name")
                     
         elif short_code == "ex":
                     print(f"Bye {user_name}.I hope you enjoyed my service")
