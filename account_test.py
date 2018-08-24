@@ -79,6 +79,12 @@ class TestAccount(unittest.TestCase):
         account_exists = Account.account_exist("0711223344")
 
         self.assertTrue(account_exists)
+    def test_display_all_accounts(self):
+        '''
+        method that returns a list of all accounts saved
+        '''
+
+        self.assertEqual(Account.display_accounts(),Account.account_list)    
 
 if __name__ == '__main__':
     unittest.main()

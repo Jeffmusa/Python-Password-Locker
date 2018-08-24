@@ -46,7 +46,13 @@ class Account:
             Boolean: True or false depending if the account exists
         '''
         for account in cls.account_list:
-            if account.account_name == name:
+            if account.password == name:
                     return True
 
         return False
+    @classmethod
+    def display_accounts(cls):
+        '''
+        method that returns the account list
+        '''
+        return cls.account_list    
