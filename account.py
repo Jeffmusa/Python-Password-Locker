@@ -47,7 +47,7 @@ class Account:
         '''
         for account in cls.account_list:
             if account.password == name:
-                    return account
+                    return True
 
         return False
     @classmethod

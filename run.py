@@ -45,22 +45,23 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these known short codes to operate :\n ca -> Create a new account.\n da -> Display accounts.\n fa ->Find created accounts.\n ex ->exit Pass Word Locker. ")
+        print("Use these known short codes to operate :\n ca -> Create a new account.\n da -> Display existing accounts.\n fa ->Find created accounts.\n ex ->exit Pass Word Locker. ")
         short_code = input().lower()
         if short_code == 'ca':
             print("New Account")
             print("*"*100)
-            print ("Account name ....")
+            print ("Account name:")
             account_name = input()
             print("User name ...")
             u_name = input()
             print("PASS WORD ...")
+            
             pwd = input()
             print("Email address ...")
             e_address = input()
-            save_accounts(create_account(account_name,u_name,pwd,e_address)) # create and save new contact.
+            save_accounts(create_account(account_name,u_name,pwd,e_address)) # create and save new account.
             print ('\n')
-            print(f"New Account {account_name} {u_name} created")
+            print(f"A New {account_name} Account with the user name  {u_name} has been created.")
             print ('\n')
         elif short_code == 'da':
              if display_accounts():
@@ -74,7 +75,7 @@ def main():
                  print("You dont seem to have any accounts saved yet")
                  print('\n')
         elif short_code == 'fa':
-                print("Enter the account you want to search for")
+                print("Enter the name of the account you want to search for")
                 search_account = input()
                 if check_existing_accounts(search_account):
                     search_cred = find_account(search_account)
@@ -87,7 +88,7 @@ def main():
                     print("You don't have an account by that name")
                     
         elif short_code == "ex":
-                    print(f"Bye {user_name}.I hope you enjoyed my service")
+                    print(f"Thanks {user_name} for your time.I hope you enjoyed my service.Bye...")
                     break
         else:
                     print("I really didn't get that. Please use the short codes")
