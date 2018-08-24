@@ -45,7 +45,7 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these known short codes to operate :\n ca - create a new account,\n da - display accounts,\n fa -find created accounts,\n ex -exit Pass Word Locker ")
+        print("Use these known short codes to operate :\n ca -> Create a new account.\n da -> Display accounts.\n fa ->Find created accounts.\n ex ->exit Pass Word Locker. ")
         short_code = input().lower()
         if short_code == 'ca':
             print("New Account")
@@ -77,11 +77,11 @@ def main():
                 print("Enter the account you want to search for")
                 search_account = input()
                 if check_existing_accounts(search_account):
-                    search_account = find_account(search_account)
-                    print(f"{search_account.account_name} {search_account.user_name}")
+                    search_cred = find_account(search_account)
+                    print(f" {search_cred.user_name}")
                     print('-' * 20)
-                    print(f"PASSWORD.......{search_account.pwd}")
-                    print(f"Email address.......{search_account.email}")
+                    print(f"PASSWORD.......{search_cred.password}")
+                    print(f"Email address.......{search_cred.email}")
                     
                 else:
                     print("You don't have an account by that name")
