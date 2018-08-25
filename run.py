@@ -86,26 +86,27 @@ def display_credentials():  #CHECK HERE LATER
 def main():
     print("Hello Welcome to your Pass Word Locker. What is your name?")
     user_name = input()
-    print(f"Hello {user_name}. what would you like to do?")
+    print(f"Hello {user_name}, sign up to Pass Word Locker to create an account.")
     print('\n')
     while True:
         print("Use these known short codes to operate :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n ex ->exit Pass Word Locker. ")
         short_code = input().lower()
         if short_code == 'su':
-            print("Create an Account")
+            print("Create a Pass Word Locker Account")
             print("_"*100)
             print ("Account name:")
             account_name = input()
             print("User name ...")
             u_name = input()
             print("PASS WORD ...")
-            
+            print("*"*40)
             pwd = input()
             print("Email address ...")
             e_address = input()
             save_accounts(create_account(account_name,u_name,pwd,e_address)) # create and save new account.
             print ('\n')
             print(f"A New {account_name} Account with the user name  {u_name} has been created.")
+            print(f"You can now login to your {account_name} account using your password.")
             print ('\n')
         elif short_code == 'da':
              if display_accounts():
@@ -123,10 +124,8 @@ def main():
             search_account = input()
             if check_existing_accounts(search_account):
                 search_cred = find_account(search_account)
-                print(f"{search_cred.account_name}")
+                print(f"You are now logged in to your {search_cred.account_name} account")
                 print('-' * 20)
-                print(f"Password.......{search_cred.password}")
-                print(f"Email address.......{search_cred.email}")
                 
                 #===============================================================================================================
                 while True:
@@ -145,10 +144,12 @@ def main():
                         save_credentials(create_credentials(credentials_name,u_name,pwd,e_address))
                         print('\n')
                         print(f"A New {credentials_name} Account with the user name  {user_name} has been created.")
-
-
-
-
+                        print ('\n')
+                    elif short_code == 'dc':
+                         if display_credentials():
+                             print("Here is your credentials")
+                             print('\n')
+                             for credentials in display_credentials():
 
                     elif short_code == "ex":
                         break
