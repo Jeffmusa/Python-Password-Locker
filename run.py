@@ -37,7 +37,7 @@ def display_accounts():
     '''
     Function that returns all the saved accounts
     '''
-    return Account.display_accounts()  
+    return Account.display_account()  
 
 def main():
     print("Hello Welcome to your Pass Word Locker. What is your name?")

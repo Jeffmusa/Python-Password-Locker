@@ -49,7 +49,7 @@ class Account:
 
         return False
     @classmethod
-    def display_accounts(cls):
+    def display_account(cls):
         '''
         method that returns the account list
         '''
