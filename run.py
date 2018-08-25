@@ -45,11 +45,11 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these known short codes to operate :\n ca -> Create a new account.\n da -> Display existing accounts.\n fa ->Find created accounts.\n ex ->exit Pass Word Locker. ")
+        print("Use these known short codes to operate :\n ca -> SIGN UP.\n da -> Display your account.\n ln ->LOGIN.\n ex ->exit Pass Word Locker. ")
         short_code = input().lower()
         if short_code == 'ca':
             print("New Account")
-            print("*"*100)
+            print("_"*100)
             print ("Account name:")
             account_name = input()
             print("User name ...")
@@ -65,27 +65,26 @@ def main():
             print ('\n')
         elif short_code == 'da':
              if display_accounts():
-                 print("Here is a list of all your accounts")
+                 print("Here is your account and your details")
                  print('\n')
                  for account in display_accounts():
                      print(f"Account name:{account.account_name}  User name: {account.user_name} Password:{account.password}")
                      print('\n')
              else:
                  print('\n')
-                 print("You dont seem to have any accounts saved yet")
+                 print("You dont seem to have created an account")
                  print('\n')
-        elif short_code == 'fa':
-                print("Enter the name of the account you want to search for")
-                search_account = input()
-                if check_existing_accounts(search_account):
-                    search_cred = find_account(search_account)
-                    print(f" {search_cred.user_name}")
-                    print('-' * 20)
-                    print(f"PASSWORD.......{search_cred.password}")
-                    print(f"Email address.......{search_cred.email}")
-                    
-                else:
-                    print("You don't have an account by that name")
+        elif short_code == 'ln':
+            print("Enter your password to login.")
+            search_account = input()
+            if check_existing_accounts(search_account):
+                search_cred = find_account(search_account)
+                print(f"{search_cred.account_name}")
+                print('-' * 20)
+                print(f"Password.......{search_cred.password}")
+                print(f"Email address.......{search_cred.email}")
+            else:
+                print("You don't have an account by that name")
                     
         elif short_code == "ex":
                     print(f"Thanks {user_name} for your time.I hope you enjoyed my service.Bye...")
@@ -94,5 +93,4 @@ def main():
                     print("I really didn't get that. Please use the short codes")
 
 if __name__ == '__main__':
-
     main()                            
