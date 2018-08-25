@@ -17,8 +17,7 @@ As a user I would like:
 ## Specifications
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-| Display guides for navigation | **In terminal: $./run.py** | Hello Welcome to your Pass Word Locker. What is your name? (once you enter your nname):Use these known short codes to operate :
- SU -> SIGN UP. DA -> Display your account. LN ->LOGIN. ex ->exit Pass Word Locker. |
+| Display guides for navigation | **In terminal: $./run.py** | Hello Welcome to your Pass Word Locker. What is your name? (once you enter your nname):Use these known short codes to operate :SU -> SIGN UP. DA -> Display your account. LN ->LOGIN. ex ->exit Pass Word Locker. |
 | Display prompt for creating an account | **Enter: SU** | Enter account name, user name password and email .|
 | Display prompt for login in | **Enter: LN** | Enter your account password to login |
 | Once logged in | **You are now logged in to your  account** |  Use these short codes:CA -> Create new credential.DC -> Display your credentials list.  ex ->Log out your credentials account. |
