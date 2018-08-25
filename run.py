@@ -134,10 +134,18 @@ def main():
                     short_code = input().lower()
                     if short_code == "ca":
                         print("Create new credential")
+                        print('_' * 20)
                         print("Credential name:.....")
                         credentials_name = input()
                         print("Credential user name:.....")
                         user_name = input()
+                        print("Credential password:.....")
+                        print('*' * 20)
+                        pwd = input()
+                        save_credentials(create_credentials(credentials_name,u_name,pwd,e_address))
+                        print('\n')
+                        print(f"A New {credentials_name} Account with the user name  {user_name} has been created.")
+
 
 
 
