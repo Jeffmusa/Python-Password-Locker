@@ -2,18 +2,18 @@ class Credentials:
     """
     Class that generates new instances of users.
     """
-    credentials_list = [] #empty account list
+    credentials_list = [] #empty credentials list
 
-    def __init__(self,credentials_name,user_name,password,email):
+    def __init__(self,credentials_name,usr_name,password,email):
         self.credentials_name = credentials_name
-        self.user_name = user_name
+        self.usr_name = usr_name
         self.password = password
         self.email = email    
 
     def save_credentials(self):
 
         '''
-        save_account method saves account objects into account_list
+        save_credentials method saves credentials objects into credentials_list
         '''
 
         Credentials.credentials_list.append(self)    
@@ -22,7 +22,7 @@ class Credentials:
     def delete_credentials(self):
 
         '''
-        delete_account method deletes a saved account from the account_list
+        delete_credentials method deletes a saved credentials from the credentials_list
         '''
 
         Credentials.credentials_list.remove(self)   
@@ -38,11 +38,11 @@ class Credentials:
     @classmethod
     def credentials_exist(cls,name):
         '''
-        Method that checks if a account exists from the account list.
+        Method that checks if a credentials exists from the credentials list.
         Args:
             name: Acc name to search if it exists
         Returns :
-            Boolean: True or false depending if the account exists
+            Boolean: True or false depending if the credentials exists
         '''
         for credentials in cls.credentials_list:
             if credentials.credentials_name == name:
@@ -54,7 +54,7 @@ class Credentials:
     @classmethod
     def display_credentials(cls):  #check this line later
         '''
-        method that returns the account list
+        method that returns the credentials list
         '''
         return cls.credentials_list            
                       
