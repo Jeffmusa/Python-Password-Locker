@@ -132,7 +132,17 @@ def main():
                 while True:
                     print("Use these short codes \n CA -> Create new credential.\n DC -> Display your credentials list  \n ex ->exit your credentials account. ")
                     short_code = input().lower()
-                    if short_code == "ex":
+                    if short_code == "ca":
+                        print("Create new credential")
+                        print("Credential name:.....")
+                        credentials_name = input()
+                        print("Credential user name:.....")
+                        user_name = input()
+
+
+
+
+                    elif short_code == "ex":
                         break
                         
             else:
