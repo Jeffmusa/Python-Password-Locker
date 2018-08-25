@@ -127,6 +127,15 @@ def main():
                 print('-' * 20)
                 print(f"Password.......{search_cred.password}")
                 print(f"Email address.......{search_cred.email}")
+                
+                #===============================================================================================================
+                while True:
+                    print("Use th\n da -> Display your account.\n ln ->LOGIN.\n ex ->exit Pass Word Locker. ")
+                    short_code = input().lower()
+                    if short_code == "ex":
+                        print(f"Thanks for your time.I hope you enjoyed my service.Bye...")
+                        break
+                        break
             else:
                 print("You don't have an account by that name")
                     
