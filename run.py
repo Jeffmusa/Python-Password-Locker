@@ -89,9 +89,9 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-        print("Use these known short codes to operate :\n ca -> SIGN UP.\n da -> Display your account.\n ln ->LOGIN.\n ex ->exit Pass Word Locker. ")
+        print("Use these known short codes to operate :\n SU -> SIGN UP.\n DA -> Display your account.\n LN ->LOGIN.\n ex ->exit Pass Word Locker. ")
         short_code = input().lower()
-        if short_code == 'ca':
+        if short_code == 'su':
             print("New Account")
             print("_"*100)
             print ("Account name:")
@@ -130,12 +130,12 @@ def main():
                 
                 #===============================================================================================================
                 while True:
-                    print("Use th\n da -> Display your account.\n ln ->LOGIN.\n ex ->exit Pass Word Locker. ")
+                    print("Use these short codes \n CA -> Create new credential.\n DC -> Display your credentials list  \n ex ->exit Pass Word Locker. ")
                     short_code = input().lower()
                     if short_code == "ex":
                         print(f"Thanks for your time.I hope you enjoyed my service.Bye...")
                         break
-                        break
+                        
             else:
                 print("You don't have an account by that name")
                     
