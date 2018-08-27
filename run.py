@@ -101,7 +101,7 @@ def main():
             pwd = input('Password : ')
             print ('\n')
             e_address = input('Email address:')
-            save_accounts(create_account(account_name,u_name,pwd,e_address)) # create and save new account.
+            save_accounts(create_account(account_name,u_name,pwd,e_address)) 
             print ('\n')
             print(f"A New {account_name} Account with the user name  {u_name} has been created.")
             print(f"You can now login to your {account_name} account using your password.")
