@@ -83,8 +83,8 @@ class TestAccount(unittest.TestCase):
         '''
         method that returns a list of all accounts saved
         '''
-
-        self.assertEqual(Account.display_accounts(),Account.account_list)    
+        displayed = Account.display_accounts()
+        self.assertEqual(displayed,Account.account_list)    
 
 if __name__ == '__main__':
     unittest.main()

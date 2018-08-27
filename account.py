@@ -30,7 +30,7 @@ class Account:
     @classmethod
     def find_by_name(cls,name):
         for account in cls.account_list:
-            if account.password == name:
+            if account.account_name == name:
                 return account    
     
 
@@ -49,7 +49,7 @@ class Account:
 
         return False
     @classmethod
-    def display_account(cls):
+    def display_accounts(cls):
         '''
         method that returns the account list
         '''
