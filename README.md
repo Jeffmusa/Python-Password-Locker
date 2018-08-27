@@ -48,7 +48,7 @@ As a user I would like:
       
         
 ## Testing the Application
-* To run the tests for the class file:
+* To run the tests for the class file and check if it functios well:
 
         $ python3.6 credentials_test.py
         
