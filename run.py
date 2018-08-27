@@ -38,7 +38,7 @@ def display_accounts():
     '''
     Function that returns all the saved accounts
     '''
-    return Account.display_account()  
+    return Account.display_accounts()  
  #_________________________________________CREDENTIALS____________________________________________________________________
 
 
@@ -122,9 +122,9 @@ def main():
             search_account = input()
             if check_existing_accounts(search_account):
                 search_cred = find_account(search_account)
-                print(f"You are now logged in to your {search_cred.account_name} account")
-                print('-' * 20)
-                
+                print("\033[1;32;1m   \n")
+                print(f"You are now logged in to your {account_name} account")
+                print("\033[1;37;1m   \n")
                 #========================================CREDENTIALS AREA=======================================================================
                 while True:
                     print('''

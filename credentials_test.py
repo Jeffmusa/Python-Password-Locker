@@ -81,7 +81,6 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
 
         credentials_exists = Credentials.credentials_exist("0711223344")
-
         self.assertTrue(credentials_exists)    
         
                        

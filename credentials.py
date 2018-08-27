@@ -45,7 +45,7 @@ class Credentials:
             Boolean: True or false depending if the credentials exists
         '''
         for credentials in cls.credentials_list:
-            if credentials.credentials_name == name:
+            if credentials.password == name:
                     return credentials
 
         return False      
