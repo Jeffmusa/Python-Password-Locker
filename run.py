@@ -165,7 +165,7 @@ def main():
                         
             else:
                 print('\n')
-                print("USE THE CODE 'DA' TO CHECK IF YOU HAVE CREATED AN ACCOUNT WITH THE PASSWORD YOU ENTERED")
+                print("WRONG PASSWORD!! PLEASE ENTER CORRECT PASSWORD TO LOGIN")
                 print('\n')
                 print('\n')
                     
