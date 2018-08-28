@@ -118,8 +118,11 @@ def main():
                  print("You dont seem to have created an account.Sign up to create a new account.")
                  print('\n')
         elif short_code == 'ln':
-            print("Enter your password to login.")
-            search_account = input()
+            print("Enter your username and password to login.")
+            print('\n')
+            input('Username:')
+            print('\n')
+            search_account = input('Password:')
             if check_existing_accounts(search_account):
                 search_cred = find_account(search_account)
                 print("\033[1;32;1m   \n")
